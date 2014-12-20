@@ -1,24 +1,18 @@
+spring:
+  application:
+    name: eureka-server
+
 server:
   port: 8761
-
-security:
-  user:
-    password: password
-
-management:
-  context-path: /admin
-  
-logging:
-  level:
-    com.netflix: 'DEBUG'
-    org.springframework.cloud: 'DEBUG'
 
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-  instance:
-    statusPageUrlPath: /admin/info
-    healthCheckUrlPath: /admin/health
   server:
     waitTimeInMsWhenSyncEmpty: 0
+  
+logging:
+  level:
+    com.netflix: 'WARN'
+    org.springframework.cloud: 'WARN'
